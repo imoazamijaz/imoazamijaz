@@ -44,6 +44,7 @@ Appointments, vitals tracking and audio transcription features, built with Flutt
 
 ## Contact
 
+- Portfolio: [imoazamijaz.github.io/imoazamijaz](https://imoazamijaz.github.io/imoazamijaz/)
 - Email: imoazamijaz@gmail.com
 - LinkedIn: [linkedin.com/in/moazam-ijaz-11a08b237](https://www.linkedin.com/in/moazam-ijaz-11a08b237)
 
