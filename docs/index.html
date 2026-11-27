@@ -40,6 +40,24 @@
   .jp{color:var(--muted);font-size:.97rem}
   footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.88rem}
   footer a{color:var(--accent);text-decoration:none}
+  html{scroll-behavior:smooth}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  header{animation:fadeUp .6s ease both}
+  section{animation:fadeUp .6s ease both}
+  section:nth-of-type(2){animation-delay:.08s}
+  section:nth-of-type(3){animation-delay:.16s}
+  section:nth-of-type(4){animation-delay:.24s}
+  section:nth-of-type(5){animation-delay:.32s}
+  section:nth-of-type(6){animation-delay:.4s}
+  .card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+  .card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 8px 24px rgba(47,129,247,.15)}
+  .links a{transition:all .2s ease}
+  .links a:hover{background:#1f6feb33;transform:translateY(-1px)}
+  .photo{transition:transform .3s ease,box-shadow .3s ease;box-shadow:0 0 0 4px #2f81f733}
+  .photo:hover{transform:scale(1.03);box-shadow:0 0 24px rgba(47,129,247,.45)}
+  .shots img{transition:transform .25s ease}
+  .shots img:hover{transform:scale(1.04)}
+  h2{position:relative}
 </style>
 </head>
 <body>
