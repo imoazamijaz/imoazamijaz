@@ -27,6 +27,10 @@
   .card a{color:var(--accent);text-decoration:none}
   .shots{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
   .shots img{width:150px;border-radius:10px;border:1px solid var(--line)}
+  .mini{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .mini .card{margin-bottom:0;padding:16px}
+  .mini h3{font-size:1rem}
+  @media(max-width:640px){.mini{grid-template-columns:1fr}}
   table{width:100%;border-collapse:collapse;font-size:.94rem}
   td{border-top:1px solid var(--line);padding:9px 6px;vertical-align:top}
   td:first-child{color:var(--muted);width:170px}
@@ -49,29 +53,78 @@
 </header>
 
 <section>
-  <h2>Featured work</h2>
+  <h2>Projects</h2>
+
   <div class="card">
-    <h3>Happn.Live — real-time, location-based social app <span class="tag">Live · iOS & Android</span></h3>
-    <p>Developed for a client during my time at <b>Compactsys</b> (remote). Users share live updates from their location, discover what is happening nearby, and request on-demand live content from specific places.</p>
+    <h3>Happn.Live — Real-Time, Location-Based Social App <span class="tag">Live · iOS & Android</span></h3>
+    <p>A live social app where users share real-time updates from their location, discover what is happening nearby, and request on-demand live content from specific places. Developed for a client during my time at <b>Compactsys</b> (remote) and published through the client's own store accounts.</p>
     <div class="shots">
       <img src="https://happn.live/wp-content/uploads/2026/02/0YDJBaoRdxHTNJM1ooX3BL9S2VU.avif" alt="Happn.Live screenshot">
       <img src="https://happn.live/wp-content/uploads/2026/02/KtKvP6VNvxIiNFkTesNk65t2s.avif" alt="Happn.Live screenshot">
       <img src="https://happn.live/wp-content/uploads/2026/02/lLHrTZcJof1b1Z2WVy9DTbXBAp4.avif" alt="Happn.Live screenshot">
     </div>
-    <p class="tech">Flutter · Firebase (Auth, Firestore, Storage, Crashlytics) · Maps & geolocation · Photo / short-video posts · Push notifications · Content moderation</p>
+    <p class="tech">Flutter · Firebase (Auth, Firestore, Storage, Crashlytics, Analytics) · Maps & geolocation · Photo / short-video posts · Push notifications · Content moderation</p>
     <p><a href="https://play.google.com/store/apps/details?id=com.happenlive.happenLive">Google Play</a> · <a href="https://apps.apple.com/jp/app/happn-live-real-time-updates/id6757418807">App Store</a> · <a href="https://happn.live/">happn.live</a></p>
   </div>
+
   <div class="card">
-    <h3>Business systems — client work at Firm 11</h3>
-    <p>Internal apps that clients run their businesses on (login-only, code private):</p>
-    <p>• <b>ERP system</b> — offline-first data entry with background sync, approval workflows, PDF reports, Bluetooth thermal printing (ESC/POS)<br>
-    • <b>CRM app</b> — contacts & follow-ups, Excel import, Google / Facebook sign-in, MVVM<br>
-    • <b>Smart Cheque Management</b> — cheque tracking with charts, due-date notifications, biometric unlock<br>
-    • <b>E-commerce app</b> — product catalogue, cart, delivery mapping, Firebase Auth</p>
+    <h3>Biomass ERP (NextERP) — Offline-First Business System <span class="tag">Client work · Firm 11</span></h3>
+    <p>An internal ERP system a client business runs its daily operations on: field data entry, multi-step approval workflows and printed reports — designed to keep working without a connection and sync in the background when one returns.</p>
+    <p class="tech">Flutter · Firebase · SQLite · Offline & background sync (Workmanager) · PDF reports · Bluetooth thermal printing (ESC/POS)</p>
   </div>
+
   <div class="card">
-    <h3>Healthcare apps — client work at Compactsys (remote)</h3>
-    <p>Appointments, vitals tracking and audio transcription features, built with Flutter + Firebase.</p>
+    <h3>Zem CRM — Customer Relationship Management <span class="tag">Client work · Firm 11</span></h3>
+    <p>A CRM app for a client's sales workflow: contact management and follow-up tracking, with bulk contact onboarding through Excel import and Google / Facebook sign-in, built on a clean MVVM architecture.</p>
+    <p class="tech">Flutter · MVVM · GetIt (DI) · Firebase (Auth, Firestore) · REST APIs (Dio) · Excel import</p>
+  </div>
+
+  <div class="card">
+    <h3>Smart Cheque Management <span class="tag">Client work · Firm 11</span></h3>
+    <p>A finance utility app for tracking cheques — what is due, when, and from whom — with charts and summaries, due-date notifications so nothing is missed, and a biometric unlock for privacy.</p>
+    <p class="tech">Flutter · Provider · Charts · Local notifications · Biometric authentication</p>
+  </div>
+
+  <div class="card">
+    <h3>Al Khair Store — E-Commerce App <span class="tag">Client work</span></h3>
+    <p>A retail e-commerce app built for a client's store: product catalogue, shopping cart and delivery mapping, with Firebase authentication.</p>
+    <p class="tech">Flutter · Firebase (Auth, Firestore) · Maps & geolocation</p>
+  </div>
+
+  <div class="card">
+    <h3>Healthcare Apps <span class="tag">Client work · Compactsys</span></h3>
+    <p>Healthcare applications developed for a client at Compactsys (remote): appointments, vitals tracking and audio transcription features.</p>
+    <p class="tech">Flutter · Firebase · Audio transcription</p>
+  </div>
+</section>
+
+<section>
+  <h2>More projects</h2>
+  <div class="mini">
+    <div class="card">
+      <h3>Stout Enterprise</h3>
+      <p>Enterprise operations app — structured data entry with Bluetooth thermal printing (ESC/POS). Client work.</p>
+    </div>
+    <div class="card">
+      <h3>Enterprise — Documents & Vouchers</h3>
+      <p>Document and voucher management with PDF generation and printing. Client work.</p>
+    </div>
+    <div class="card">
+      <h3>Print Service</h3>
+      <p>A small, clean Bluetooth thermal printer (ESC/POS) service utility for Flutter apps.</p>
+    </div>
+    <div class="card">
+      <h3>Fit Alpha</h3>
+      <p>University final-year project — a fitness tracking app built with Flutter.</p>
+    </div>
+    <div class="card">
+      <h3>Todo App</h3>
+      <p>A complete todo app with SQLite storage, GetX state management and local notifications.</p>
+    </div>
+    <div class="card">
+      <h3>Chat App</h3>
+      <p>An early Firebase chat app — one of my first Flutter learning projects (2023).</p>
+    </div>
   </div>
 </section>
 
